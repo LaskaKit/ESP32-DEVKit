@@ -1,55 +1,28 @@
-# ESP32 LPkit
+# ESP32 DEVkit
+Are you looking for a combination of a low-power kit with ESP32 with a very simple programming? We have designed a new development kit just for you, which combines very low power consumption, an integrated programmer, LiPol charger, versatile uŠup connector for sensors. Thanks to the selection of suitable components, the consumption of the [ESP32-DEVkit](https://www.laskakit.cz/laskakit-esp32-devkit/?variantId=11481) is only 9.5 uA in the deepest ESP32 sleep.
 
-Do you have a project in your head where you need to combain a low power consumption, high power and Wi-Fi and Bluetooth connection? Discover our evaluation board based on ESP32 module called ![ESP32 LPkit](https://www.laskakit.cz/laskakit-esp32-lpkit-pcb-antenna/).
-During the development of this board, we also thought about other features which you may use - for example built-in Li-ion charger. 
+![ESP32-DEVkit](https://github.com/LaskaKit/ESP32-DEVKit/blob/main/img/3.jpg)
 
-## Pinout
+As you can see in the picture above, the ESP32 DEVkit development kit includes a USB-C connector for battery charging and programming, a connector for the Lipol battery, a RESET and FLASH button, and GPIO pins on both sides of the board. 
 
-![ESP32 LPkit pinout](https://github.com/LaskaKit/ESP32-LPKit/blob/main/img/esp32-lpkit-front_popis.jpg)
+What we're 100% sure you'll like is our connector, which we've named μŠup. It's small, yet durable, and you can't get the sensor re-polarized. It's just safe. With this connector, you can connect your development board to many more sensors and boards. Some of them we already have in stock, others we are working on. The connector is pin compatible with Adafruit Stemma and Sparkfun Qwiik.
 
-As you can see on the picture above, ![ESP32 LPkit](https://www.laskakit.cz/laskakit-esp32-lpkit-pcb-antenna/) board contains popular and versatile USB-C connector for (only) charging of Li-ion battery, connector for Li-ion battery, RESET button and FLASH button, and GPIO headers on both sides of board and our connector called μŠup.
+For example [SHT40 (temperature/humidity)](https://www.laskakit.cz/laskakit-sht40-senzor-teploty-a-vlhkosti-vzduchu/), [BME280 (temperature, humidity, atmospheric pressure)](https://www.laskakit.cz/arduino-senzor-tlaku--teploty-a-vlhkosti-bme280/), [SCD41 (CO2, temperature, humidity)](https://www.laskakit.cz/laskakit-scd41-senzor-co2--teploty-a-vlhkosti-vzduchu/).
 
-![ESP32 LPkit pinout](https://github.com/LaskaKit/ESP32-LPKit/blob/main/img/esp32-lpkit-back_popis.jpg)
-
-On the bottom side, there is programming connector. The connector is pin-to-pin compatible with our programmer called ![LaskaKit CH340 programmer](https://www.laskakit.cz/laskakit-ch340-programmer-usb-c--microusb--uart/). 
-
-We are 100% sure that you will appreciate our μŠup connector. It is small, durable and safe connector for connection to other evaluation board and sensor boards. The μŠup connector is pin-to-pin compatible with Adafruit Stemma a Sparkfun Qwiik. We offer a lot of sensors and board and we are designing a new board and sensors. 
+ESP32-DEVkit includes voltage divider what is connected to IO34 (need to short solder bridge).
 
 ## Charging IC for Li-ion battery
+The Li-ion battery is charged via a modern and universal USB-C connector, charging is controlled by the TP4054 chip. 
+You can choose between 260mA and 400mA charging current. Just power the solder bridge on the BOTTOM side. 
 
-Li-ion battery is charged by USB-C connector, the used charger IC is TP4054. 
-The charging current is defined by resistor R11. 
-How to change the charging current you find out on the formula below. 
-
-If you don't change the resistor R11, the default value is 1k65 so the maximum current charging current is 400 mA. 
+![ESP32-DEVkit](https://github.com/LaskaKit/ESP32-DEVKit/blob/main/img/1.jpg)
 
 ## Power consumption
-
-![What should be the value of resistor for my charging current](https://github.com/LaskaKit/ESP32-LPKit/blob/main/img/ESP32LPkit3.jpg)
-
-The power consumption of ESP32 LPkit is only 6.5 uA (powered from Li-ion battery, 4.2V) during the deep-sleep. 6.5uA means the whole board - ESP32, LDO etc. without CH340 programmer.
+The ESP32 LP kit consumption during sleep mode is only 9.5 uA (at 4.2V). This means that the entire board, powered only by the Li-ion battery with the programmer installed, consumes only 9.5uA. 
 
 ## Programming
+Programming is very easy thanks to the built-in programmer, you connect the USB-C cable to the board, select the port where the programmer is connected in the Arduino IDE and upload your code by clicking on "Upload". Switch to 3.3V on the programmer!
 
-![ESP32 LPkit and CH340 programmer](https://github.com/LaskaKit/ESP32-LPKit/blob/main/img/ESP32LPkit2.jpg)
+The sample code can be found at https://github.com/LaskaKit/ESP32-DEVKit/tree/main/SW
 
-The uploading of your code is really easy thanks to our “![LaskaKit CH340 programmer](https://www.laskakit.cz/laskakit-ch340-programmer-usb-c--microusb--uart/)”, you just plug in the connector from CH340 programmer to ESP32 LPkit. Then you connect microUSB or USB-C connector to programmer and in Arduino IDE, you click on "Upload". Programmer automatically start the ESP32 to bootloader mode and upload the code. 
-Of course, the ![LaskaKit CH340 programmer](https://www.laskakit.cz/laskakit-ch340-programmer-usb-c--microusb--uart/) is not needed for uploading of your code. You may use every USB-UART convertor with RX, TX, DTR and RTS pins. Don't forget to switch to 3.3V!
-
-In case you don't have an USB-UART programmer with DTR and RTS pins, you may use RESET and FLASH buttons to reset the ESP32 and switch to bootloader mode. 
-
-Press FLASH button
-
-Press RESET and still hold FLASH button
-
-Release RESET button
-
-And then also release FLASH button
-
-Now ESP32 is in bootloader mode, you just click on "Upload" in you Arduino IDE
-
-The example code you can find here (https://github.com/LaskaKit/ESP32-LPKit/tree/main/SW)
-
-The ultra low-power eval board LaskaKit ESP32-LPkit is on https://www.laskakit.cz/laskakit-esp32-lpkit-pcb-antenna/
-
-The programmer is available on https://www.laskakit.cz/laskakit-ch340-programmer-usb-c--microusb--uart/
+You can purchase the ESP32-DEVkit at https://www.laskakit.cz/laskakit-esp32-devkit/?variantId=11481
