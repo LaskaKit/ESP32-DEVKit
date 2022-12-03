@@ -1,52 +1,28 @@
-# Deepsleep 8uA :)
-# ESP32 LPkit
-Stojíš před projektem, kde řešíš nízkou spotřebu, potřebu vysokého výkonu čipu a Wi-Fi nebo Bluetooth připojení? Pak by se ti mohl hodit náš vývojový kit nazvaný ![ESP32 LPkit](https://www.laskakit.cz/laskakit-esp32-lpkit-pcb-antenna/).
-Během vývoje desky ![ESP32 LPkit](https://www.laskakit.cz/laskakit-esp32-lpkit-pcb-antenna/) jsme mysleli i na další vychytávky, který bys mohl potřebovat - třeba nabíjení připojeného Lipol akumulátoru. 
+# ESP32 DEVkit
+Hledáš kombinaci velmi úsporného vývojového kitu s ESP32 s naprosto jednoduchým programováním? Právě pro tebe jsme připravili nový vývojový kit, který práce kombinuje velmi nízkou spotřebu a integrovaný programátor. Díky výběru vhodných součátek je spotřeba [ESP32-DEVkit](https://www.laskakit.cz/laskakit-esp32-devkit/?variantId=11481) v nejhlubším spánku ESP32 pouhých 9.5 uA. 
 
-Rozmístění
+![ESP32-DEVkit](https://github.com/LaskaKit/ESP32-DEVKit/blob/main/img/3.jpg)
 
-![ESP32 LPkit rozmístění](https://github.com/LaskaKit/ESP32-LPKit/blob/main/img/esp32-lpkit-front_popis.jpg )
-
-Jak můžeš vidět na obrázku výše, vývojový kit ![ESP32 LPkit](https://www.laskakit.cz/laskakit-esp32-lpkit-pcb-antenna/) obsahuje USB-C konektor pouze pro nabíjení akumulátoru, konektor pro Lipol akumulátor, tlačítko RESET a FLASH, a GPIO hřebínky po obou stranách desky. 
+Jak můžeš vidět na obrázku výše, vývojový kit ESO32 DEVkit obsahuje USB-C konektor pro nabíjení akumulátoru a programování, konektor pro Lipol akumulátor, tlačítko RESET a FLASH, a GPIO hřebínky po obou stranách desky. 
 
 Co jsme si 100% jistí je, že se ti zalíbí náš konektor, který jsme nazvali μŠup. Je to malý, zároveň odolný a nemůže se ti stát, že bys čidlo přepóloval. Je prostě bezpečný. S tímto konektorem můžeš vývojovou desku připojit k další spoustě čidel a desek. Některé už máme skladem, na jiných pracujeme. Konektor je pinově kompatibilní s Adafruit Stemma a Sparkfun Qwiik.
 
-Z druhé desky je pak programovací konektor.
+Například [SHT40 (teplota/vlhkost)](https://www.laskakit.cz/laskakit-sht40-senzor-teploty-a-vlhkosti-vzduchu/), [BME280 (teplota, vlhkost, atmosférický tlak)](https://www.laskakit.cz/arduino-senzor-tlaku--teploty-a-vlhkosti-bme280/), [SCD41 (CO2, teplota, vlhkost)](https://www.laskakit.cz/laskakit-scd41-senzor-co2--teploty-a-vlhkosti-vzduchu/).
 
-![ESP32 LPkit rozmístění](https://github.com/LaskaKit/ESP32-LPKit/blob/main/img/esp32-lpkit-back_popis.jpg )
+ESP32-DEVkit obsahuje dělič napětí, který je připojen k IO34 (je třeba zkratovat pájecí můstek).
 
 ## Nabíjecí obvod akumulátoru
-
 Li-ion akumulátor je nabíjen skrze moderní a univerzální USB-C konektor, nabíjení je řízeno čipem TP4054. 
-Nabíjecí proud je dán rezistorem R11. 
-Výpočet nalezneš níže, kde Rprog je rezistor R11.
+Nabíjecí proud si můžeš vybrat mezi 260mA a 400mA. Stačí propájet pájecí most na BOTTOM straně. 
 
-Pokud rezistor R11 nezměníte, jeho hodnota je 1k65 a maximální nabíjecí proud je 400 mA. 
-
-![Vzorec pro výpočet nabíjecího proudu](https://github.com/LaskaKit/ESP32-LPKit/blob/main/img/ESP32LPkit3.jpg)
+![ESP32-DEVkit](https://github.com/LaskaKit/ESP32-DEVKit/blob/main/img/1.jpg)
 
 ## Spotřeba
-
-Spotřeba ESP32 LP kit během režimu spánku je pouhých 6,5 uA (při 4,2V). To znamená, že celá deska, napájena pouze z Li-ion akumulátoru bez připojeného ![LaskaKit CH340 programmer](https://www.laskakit.cz/laskakit-ch340-programmer-usb-c--microusb--uart/) odebírá pouze 6,5uA.
+Spotřeba ESP32 LP kit během režimu spánku je pouhých 9.5 uA (při 4,2V). To znamená, že celá deska, napájena pouze z Li-ion akumulátoru s osazeným programátorem odebírá pouhých 9.5uA. 
 
 ## Programování
+Programování je díky osazenému programátoru velmi jednoduché, připojíš USB-C kabel do desky, v Arduino IDE vybereš port, kam je programátor připojený a tvůj kód nahraješ kliknutím na “Nahrát”. Na programátoru přepni na 3.3V!
 
-![ESP340 LPkit and CH340 programmer](https://github.com/LaskaKit/ESP32-LPKit/blob/main/img/ESP32LPkit2.jpg)
+Vzorový kód nalezneš na https://github.com/LaskaKit/ESP32-DEVKit/tree/main/SW
 
-Programování je díky našemu programátoru “![LaskaKitCH340 programmer](https://www.laskakit.cz/laskakit-ch340-programmer-usb-c--microusb--uart/)” velmi jednoduché, programátor zasuneš do konektoru, připojíš microUSB konektor nebo USB-C konektor do programátoru, v Arduino IDE vybereš port, kam je programátor připojený a tvůj kód nahraješ kliknutím na “Nahrát”. Na programátoru přepni na 3.3V!
-
-Pokud nemáš náš programátor nebo jiný USB-UART převodník bez DTR a RTS pinu, pak je třeba před nahráním vstoupit do bootloader módu, což provedeš kombinací tlačítek RESET a FLASH
-
-Stiskni FLASH
-
-Stiskni RESET a stále drž FLASH
-
-Uvolni RESET
-
-Nakonec uvolni i tlačítko FLASH
-
-Poté stačí kliknout na “Nahrát” ve tvém Arduino IDE.
-
-Vzorový kód nalezneš na https://github.com/LaskaKit/ESP32-LPKit/tree/main/SW
-
-ESP32-LPKit si můžeš zakoupit na https://www.laskakit.cz/laskakit-esp32-lpkit-pcb-antenna/
+ESP32-DEVkit si můžeš zakoupit na https://www.laskakit.cz/laskakit-esp32-devkit/?variantId=11481
