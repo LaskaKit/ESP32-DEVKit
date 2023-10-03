@@ -1,7 +1,7 @@
 # ESP32 DEVkit
 Are you looking for a combination of a low-power kit with ESP32 with a very simple programming? We have designed a new development kit just for you, which combines very low power consumption, an integrated programmer, LiPol charger, versatile uŠup connector for sensors. Thanks to the selection of suitable components, the consumption of the [ESP32-DEVkit](https://www.laskakit.cz/laskakit-esp32-devkit/?variantId=11481) is only 9.5 uA in the deepest ESP32 sleep.
 
-![ESP32-DEVkit](https://github.com/LaskaKit/ESP32-DEVKit/blob/main/img/3.jpg)
+![ESP32-DEVkit](https://github.com/LaskaKit/ESP32-DEVKit/blob/main/img/LaskaKit-ESP32-DEVKit_v2-1.jpg)
 
 As you can see in the picture above, the ESP32 DEVkit development kit includes a USB-C connector for battery charging and programming, a connector for the Lipol battery, a RESET and FLASH button, and GPIO pins on both sides of the board. 
 
@@ -15,7 +15,7 @@ ESP32-DEVkit includes voltage divider what is connected to IO34 (need to short s
 The Li-ion battery is charged via a modern and universal USB-C connector, charging is controlled by the TP4054 chip. 
 You can choose between 260mA and 400mA charging current. Just power the solder bridge on the BOTTOM side. 
 
-![ESP32-DEVkit](https://github.com/LaskaKit/ESP32-DEVKit/blob/main/img/1.jpg)
+![ESP32-DEVkit](https://github.com/LaskaKit/ESP32-DEVKit/blob/main/img/LaskaKit-ESP32-DEVKit_v2-3.jpg)
 
 ## Power consumption
 The ESP32 LP kit consumption during sleep mode is only 9.5 uA (at 4.2V). This means that the entire board, powered only by the Li-ion battery with the programmer installed, consumes only 9.5uA. 

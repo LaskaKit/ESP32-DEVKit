@@ -1,11 +1,12 @@
 /*
-* This example code is used for LaskaKit ESP32-DEVKit board 
-* with our Temperature and Humidity SHT40 module
-* ESP32-DEVKit board reads temperature and humidity from SHT40 sensor 
+* This example code is used for LaskaKit ESP32-DEVKit board https://www.laskakit.cz/laskakit-esp32-devkit/
+* with our Temperature and Humidity SHT40 module https://www.laskakit.cz/laskakit-sht40-senzor-teploty-a-vlhkosti-vzduchu/
+* ESP32-DEVKit board 
+reads temperature and humidity from SHT40 sensor 
 * and sends every second through UART
 * 
 *
-* Made by (c) laskakit.cz 2021
+* Made by (c) laskakit.cz 2023
 *
 * Libraries: https://github.com/Sensirion/arduino-i2c-sht4x
 * 
@@ -23,7 +24,7 @@ void setup() {
   digitalWrite(2, LOW); // Surn on epaper transistor
   delay(100);            // Delay so it has time to turn on
 
-    Serial.begin(38400);
+    Serial.begin(115200);
     while (!Serial) {
         delay(100);
     }

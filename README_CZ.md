@@ -1,7 +1,7 @@
 # ESP32 DEVkit
 Hledáš kombinaci velmi úsporného vývojového kitu s ESP32 s naprosto jednoduchým programováním? Právě pro tebe jsme připravili nový vývojový kit, který práce kombinuje velmi nízkou spotřebu a integrovaný programátor. Díky výběru vhodných součátek je spotřeba [ESP32-DEVkit](https://www.laskakit.cz/laskakit-esp32-devkit/?variantId=11481) v nejhlubším spánku ESP32 pouhých 9.5 uA. 
 
-![ESP32-DEVkit](https://github.com/LaskaKit/ESP32-DEVKit/blob/main/img/3.jpg)
+![ESP32-DEVkit](https://github.com/LaskaKit/ESP32-DEVKit/blob/main/img/LaskaKit-ESP32-DEVKit_v2-1.jpg)
 
 Jak můžeš vidět na obrázku výše, vývojový kit ESO32 DEVkit obsahuje USB-C konektor pro nabíjení akumulátoru a programování, konektor pro Lipol akumulátor, tlačítko RESET a FLASH, a GPIO hřebínky po obou stranách desky. 
 
@@ -15,7 +15,7 @@ ESP32-DEVkit obsahuje dělič napětí, který je připojen k IO34 (je třeba zk
 Li-ion akumulátor je nabíjen skrze moderní a univerzální USB-C konektor, nabíjení je řízeno čipem TP4054. 
 Nabíjecí proud si můžeš vybrat mezi 260mA a 400mA. Stačí propájet pájecí most na BOTTOM straně. 
 
-![ESP32-DEVkit](https://github.com/LaskaKit/ESP32-DEVKit/blob/main/img/1.jpg)
+![ESP32-DEVkit](https://github.com/LaskaKit/ESP32-DEVKit/blob/main/img/LaskaKit-ESP32-DEVKit_v2-3.jpg)
 
 ## Spotřeba
 Spotřeba ESP32 LP kit během režimu spánku je pouhých 9.5 uA (při 4,2V). To znamená, že celá deska, napájena pouze z Li-ion akumulátoru s osazeným programátorem odebírá pouhých 9.5uA. 
