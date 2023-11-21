@@ -23,12 +23,17 @@
 #include "Orbitron_Bold_42.h"
 #include "Orbitron_Bold_72.h"
 
-// any pins can be used
-#define SHARP_SCK  18
-#define SHARP_MOSI 23
-#define SHARP_SS   5
+// SPI uSUP LaskaKit ESP32-DEVKit https://www.laskakit.cz/laskakit-esp32-devkit/
+#define SHARP_SCK  14
+#define SHARP_MOSI 13
+#define SHARP_CS   15
 
-Adafruit_SharpMem display(SHARP_SCK, SHARP_MOSI, SHARP_SS, 400, 250);
+// SPI uSUP LaskaKit ESP32-S3-DEVKit https://www.laskakit.cz/laskakit-esp32-s3-devkit
+//#define SHARP_SCK  12
+//#define SHARP_MOSI 11
+//#define SHARP_CS   10
+
+Adafruit_SharpMem display(SHARP_SCK, SHARP_MOSI, SHARP_CS, 400, 250);
 
 
 #define BLACK 0
@@ -45,6 +50,10 @@ float humidity;
 void setup(void) {
 
   WiFi.mode(WIFI_MODE_NULL);
+    
+    pinMode(2, OUTPUT);    // Set uSUP connector power transistor as output
+  digitalWrite(2, HIGH); // Turn power ON uSUP connector
+  delay(100);            // Delay so it has time to turn on
 
   ADC_VALUE = analogRead(34);
 

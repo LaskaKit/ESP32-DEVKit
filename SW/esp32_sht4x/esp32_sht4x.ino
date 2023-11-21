@@ -20,8 +20,8 @@ SensirionI2CSht4x sht4x;
 
 void setup() {
 
-  pinMode(2, OUTPUT);    // Set epaper transistor as output
-  digitalWrite(2, LOW); // Surn on epaper transistor
+  pinMode(2, OUTPUT);    // Set uSUP connector power transistor as output
+  digitalWrite(2, HIGH); // Turn power ON uSUP connector
   delay(100);            // Delay so it has time to turn on
 
     Serial.begin(115200);

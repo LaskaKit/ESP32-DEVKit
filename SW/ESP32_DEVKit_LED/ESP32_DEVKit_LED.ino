@@ -14,8 +14,9 @@ Adafruit_NeoPixel pixels = Adafruit_NeoPixel(1, PIN_LED, NEO_GRB + NEO_KHZ800);
 
 void setup() {
   Serial.begin(115200);
-  pinMode(PIN_ON, OUTPUT);      // Set EN pin for second stabilisator as output
-  digitalWrite(PIN_ON, HIGH);   // Turn on the second stabilisator
+  pinMode(2, OUTPUT);    // Set uSUP connector power transistor as output
+  digitalWrite(2, HIGH); // Turn power ON uSUP connector
+  delay(100);            // Delay so it has time to turn on
 
   pixels.begin();
   pixels.setBrightness(10);
