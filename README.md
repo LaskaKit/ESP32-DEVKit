@@ -5,7 +5,7 @@ Are you looking for a combination of a low-power kit with ESP32 with a very simp
 
 As you can see in the picture above, the ESP32 DEVkit development kit includes a USB-C connector for battery charging and programming, a connector for the Lipol battery, a RESET and FLASH button, and GPIO pins on both sides of the board. 
 
-What we're 100% sure you'll like is our connector, which we've named μŠup. It's small, yet durable, and you can't get the sensor re-polarized. It's just safe. With this connector, you can connect your development board to many more sensors and boards. Some of them we already have in stock, others we are working on. The connector is pin compatible with Adafruit Stemma and Sparkfun Qwiik.
+What we're 100% sure you'll like is our connector, which we've named μŠup. It's small, yet durable, and you can't get the sensor re-polarized. It's just safe. With this connector, you can connect your development board to many more sensors and boards. Some of them we already have in stock, others we are working on. The connector is pin compatible with Adafruit Stemma and Sparkfun Qwiik. To enable power delivery through μŠup and μŠup SPI, you'll have to set GPIO Pin 2 to HIGH.
 
 For example [SHT40 (temperature/humidity)](https://www.laskakit.cz/laskakit-sht40-senzor-teploty-a-vlhkosti-vzduchu/), [BME280 (temperature, humidity, atmospheric pressure)](https://www.laskakit.cz/arduino-senzor-tlaku--teploty-a-vlhkosti-bme280/), [SCD41 (CO2, temperature, humidity)](https://www.laskakit.cz/laskakit-scd41-senzor-co2--teploty-a-vlhkosti-vzduchu/).
 
