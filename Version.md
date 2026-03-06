@@ -1,4 +1,6 @@
-### Version 2.0
+### Version 3.0
+- All new power part
+#### Version 2.0
 - New µŠUP SPI connector (need to be powered by pin IO02)
 - RGB LED on pin IO04 (need to be powered by pin IO02)
 #### Version 1.2
