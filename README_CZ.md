@@ -9,7 +9,7 @@ Co jsme si 100% jistí je, že se ti zalíbí náš konektor, který jsme nazval
 
 Například [SHT40 (teplota/vlhkost)](https://www.laskakit.cz/laskakit-sht40-senzor-teploty-a-vlhkosti-vzduchu/), [BME280 (teplota, vlhkost, atmosférický tlak)](https://www.laskakit.cz/arduino-senzor-tlaku--teploty-a-vlhkosti-bme280/), [SCD41 (CO2, teplota, vlhkost)](https://www.laskakit.cz/laskakit-scd41-senzor-co2--teploty-a-vlhkosti-vzduchu/).
 
-ESP32-DEVkit obsahuje dělič napětí, který je připojen k IO34 (je třeba zkratovat pájecí můstek).
+ESP32-DEVkit obsahuje dělič napětí, který je připojen k IO34 (je třeba zkratovat pájecí můstek na zadní straně desky).
 
 ## Nabíjecí obvod
 Nabíjení baterie zajišťuje nabíjecí obvod TP4054, zatímco stabilní napětí 3,3 V pro mikrokontroler poskytuje nízkopříkonový stabilizátor RT9080-33. USB-UART převodník CH9102F umožňuje snadné programování a komunikaci s počítačem. 
@@ -20,10 +20,10 @@ Na desce je také uživatelské tlačítko, reset tlačítko a RGB LED (SK6812) 
 ![ESP32-DEVkit](https://github.com/LaskaKit/ESP32-DEVKit/blob/main/img/LaskaKit-ESP32-DEVKit_v2-3.jpg)
 
 ## Spotřeba
-Spotřeba ESP32 LP kit během režimu spánku je pouhých 9.5 uA (při 4,2V). To znamená, že celá deska, napájena pouze z Li-ion akumulátoru s osazeným programátorem odebírá pouhých 9.5uA. 
+Spotřeba ESP32 LP kit během režimu spánku je pouhých 12,7 µA (při 4,2V). To znamená, že celá deska, napájena pouze z Li-ion akumulátoru s osazeným programátorem odebírá pouhých 12,7 µA. 
 
 ## Programování
-Programování je díky osazenému programátoru velmi jednoduché, připojíš USB-C kabel do desky, v Arduino IDE vybereš port, kam je programátor připojený a tvůj kód nahraješ kliknutím na “Nahrát”. Na programátoru přepni na 3.3V!
+Programování je díky osazenému programátoru velmi jednoduché, připojíš USB-C kabel do desky, v Arduino IDE vybereš port, kam je programátor připojený a tvůj kód nahraješ kliknutím na “Nahrát”.
 
 Vzorový kód nalezneš na https://github.com/LaskaKit/ESP32-DEVKit/tree/main/SW
 
